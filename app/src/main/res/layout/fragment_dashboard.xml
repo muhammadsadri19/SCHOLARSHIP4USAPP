@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.dashboard.DashboardFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/containerDashboard"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/border_dashboard">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="24dp"
+                    android:src="@mipmap/logo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="Muuri"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toEndOf="@+id/imageView"
+                    app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sudah siap belajar?"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="@+id/tv_username"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_username" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"
+                android:elevation="3dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="0.2"
+                        android:background="@drawable/border_menu_dashboard"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/img_kampus"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/graduate" />
+
+                        <TextView
+                            android:id="@+id/tv_kampus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/menu2"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="0.2"
+                        android:background="@drawable/border_menu_dashboard"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/img_fasilitas"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/graduate"
+                            app:srcCompat="@drawable/company" />
+
+                        <TextView
+                            android:id="@+id/tv_fasilitas"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/menu3"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="0.2"
+                        android:background="@drawable/border_menu_dashboard"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/img_volunteer"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/graduate"
+                            app:srcCompat="@drawable/donation" />
+
+                        <TextView
+                            android:id="@+id/tv_volunteer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/menu6"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="0.2"
+                        android:background="@drawable/border_menu_dashboard"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/img_manager"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/graduate"
+                            app:srcCompat="@drawable/schedule" />
+
+                        <TextView
+                            android:id="@+id/tv_manager"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/menu4"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="0.2"
+                        android:background="@drawable/border_menu_dashboard"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/img_member"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/graduate"
+                            app:srcCompat="@drawable/team" />
+
+                        <TextView
+                            android:id="@+id/tv_member"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/menu5"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="0.2"
+                        android:background="@drawable/border_menu_dashboard"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/img_program"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/graduate"
+                            app:srcCompat="@drawable/testing" />
+
+                        <TextView
+                            android:id="@+id/tv_program"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/menu7"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="0.2"
+                        android:background="@drawable/border_menu_dashboard"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/img_toelf"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/graduate"
+                            app:srcCompat="@drawable/bags" />
+
+                        <TextView
+                            android:id="@+id/tv_toefl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/menu1"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="0.2"
+                        android:background="@drawable/border_menu_dashboard"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/img_testimoni"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/graduate"
+                            app:srcCompat="@drawable/customerreview" />
+
+                        <TextView
+                            android:id="@+id/tv_testimoni"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/menu8"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="POSTINGAN TERBARU KITA !"
+                android:textColor="@color/textColorLinkWeb" />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

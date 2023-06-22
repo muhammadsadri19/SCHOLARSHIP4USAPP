@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Scholarship4Us</string>
+    <string name="title_informasi">Informasi Terbaru</string>
+    <string name="title_beranda">Beranda</string>
+    <string name="title_setting">Pengaturan</string>
+
+    <string name="koneksi_error">Koneksi error</string>
+
+    <!--Notifikasi APP-->
+    <string name="channel_name">Updater</string>
+    <string name="channel_desc">Update data post otomatis</string>
+    <string name="notif_title">Ada Informasi baru!</string>
+    <string name="notif_text">Cek sekarang biar nggak penasaran...</string>
+
+    <!-- Item List Menu Dasboard -->
+    <string name="menu1">TOEFL</string>
+    <string name="menu2">KAMPUS</string>
+    <string name="menu3">FASILITAS</string>
+    <string name="menu4">MANAGER</string>
+    <string name="menu5">MEMBER</string>
+    <string name="menu6">VOLUNTEER</string>
+    <string name="menu7">PROGRAM</string>
+    <string name="menu8">TESTIMONI</string>
+
+</resources>
