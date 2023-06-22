@@ -27,6 +27,9 @@ object PostApi {
     val service: PostApiService by lazy {
         retrofit.create(PostApiService::class.java)
     }
+    fun getPostUrl(nama: String): String {
+        return nama
+    }
 }
 
 enum class ApiStatus { LOADING, SUCCESS, FAILED }

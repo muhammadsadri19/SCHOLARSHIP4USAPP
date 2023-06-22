@@ -1,5 +1,6 @@
 package org.muhammadsadri.scholarship4us.ui.dashboard
 
+import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,15 +8,21 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import org.muhammadsadri.scholarship4us.R
+import org.muhammadsadri.scholarship4us.adapter.PostBerandaAdapter
 import org.muhammadsadri.scholarship4us.databinding.FragmentDashboardBinding
+import org.muhammadsadri.scholarship4us.network.ApiStatus
 
 class DashboardFragment : Fragment() {
 
+    private lateinit var postBerandaAdapter: PostBerandaAdapter
     private var _binding: FragmentDashboardBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
+    private val dashboardViewModel : DashboardViewModel by lazy {
+        ViewModelProvider(this)[DashboardViewModel::class.java]
+    }
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -23,8 +30,6 @@ class DashboardFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val dashboardViewModel =
-            ViewModelProvider(this).get(DashboardViewModel::class.java)
 
         _binding = FragmentDashboardBinding.inflate(inflater, container, false)
         val root: View = binding.root
@@ -39,11 +44,25 @@ class DashboardFragment : Fragment() {
         binding.imgToelf.setImageResource(R.drawable.bags)
         binding.imgVolunteer.setImageResource(R.drawable.testing)
 
+        postBerandaAdapter = PostBerandaAdapter()
+        binding.rvPostingan.adapter = postBerandaAdapter
+        val recyclerView: RecyclerView = binding.rvPostingan
+        recyclerView.addItemDecoration(
+            DividerItemDecoration(
+                requireContext(), RecyclerView.HORIZONTAL
+            )
+        )
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        recyclerView.setHasFixedSize(true)
+
         return root
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        dashboardViewModel.getData().observe(viewLifecycleOwner) {
+            postBerandaAdapter.updateData(it)
+        }
     }
+
 }
